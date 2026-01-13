@@ -1,0 +1,19 @@
+- [Array\#filter \(Ruby 4\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/4.0/method/Array/i/filter.html)
+filter -> Enumerator
+filter {|item| ... } -> [object]
+
+各要素に対してブロックを実行し、値が真であった要素を全て含む配列を返す。真になる要素がひとつもなかった場合は空の配列を返す。
+ブロックを省略した場合は Enumerator を返す。
+
+```ruby
+ary = [1, 2, 3, 4, 5]
+p ary.filter { |num| num.odd? }
+#=> [1, 3, 5]
+
+p ary.filter { |num| num == 10}
+#=> []
+
+p ary.filter
+#<Enumerator: [1, 2, 3, 4, 5]:filter>
+```
+
