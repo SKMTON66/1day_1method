@@ -16,4 +16,3 @@ p ary.filter { |num| num == 10}
 p ary.filter
 #<Enumerator: [1, 2, 3, 4, 5]:filter>
 ```
-
