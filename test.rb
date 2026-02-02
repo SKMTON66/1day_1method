@@ -1,18 +1,10 @@
-ary = [1, 2, 3]
-p ary.permutation(2).to_a # デフォルトだとEnumeratorオブジェクトを返すので、`.to_a`をつける
-#=> [[1, 2], [1, 3], [2, 1], [2, 3], [3, 1], [3, 2]]
+ary = [1, 2, 3, 4, 5]
+p ary.pop
+#=> 5
 
-p ary.permutation(3).to_a
-#=> [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
+ary2 = [1, 2, 3, 4, 5]
+p ary2.pop(2)
+#=> [3, 4]
 
-names = ["Alice", "Bob", "Charlie"]
-
-names.permutation(2) do |name|
-  puts name.join(" & ")
-end
-#=> Alice & Bob
-#=> Alice & Charlie
-#=> Bob & Alice
-#=> Bob & Charlie
-#=> Charlie & Alice
-#=> Charlie & Bob
+p [].pop #=> nil
+p [].pop(1) #=> []
