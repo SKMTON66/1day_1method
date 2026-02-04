@@ -1,6 +1,6 @@
-ary = [1, 2, 3, 4, 5]
-p ary.prepend(0)
-#=> [0, 1, 2, 3, 4, 5]
+ary = [1, 2]
+ary_2 = [3, 4]
 
-p ary.prepend("Aalice", "Bob")
-#=> ["Aalice", "Bob", 0, 1, 2, 3, 4, 5]
+p ary.product(ary_2)
+
+ary.product(ary_2) { print it }
