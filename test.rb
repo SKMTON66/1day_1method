@@ -1,6 +1,4 @@
-ary = [1, 2]
-ary_2 = [3, 4]
+ary = [[1, 2], [3, 4], [5, 2]]
 
-p ary.product(ary_2)
-
-ary.product(ary_2) { print it }
+p ary.rassoc(2) #=> [1, 2]
+p ary.rassoc(0) #=> nil
