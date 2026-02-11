@@ -1,5 +1,7 @@
 ary = ["a", "b", "c"]
 
-p ary.replace ["d", "e", "f", "g"]
+p ary.reverse #=> ["c", "b", "a"]
+p ary #=> ["a", "b", "c"]
 
-p ary
+p ary.reverse! #=> ["c", "b", "a"]
+p ary #=> ["c", "b", "a"]
