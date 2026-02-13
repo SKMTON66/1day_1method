@@ -1,3 +1,5 @@
-ary = ["a", "b", "c"]
+ary = [10, 12, 13, 14, 15, 10]
 
-ary.reverse_each { p it.upcase }
+p ary.rindex(10) #=> 5
+p ary.rindex {it.odd?} #=> 4
+p ary.rindex {it.even?} #=> 5
