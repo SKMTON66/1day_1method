@@ -1,5 +1,10 @@
-ary = [10, 12, 13, 14, 15, 10]
+ary = [10, 12, 13, 14, 15, 16]
 
-p ary.rindex(10) #=> 5
-p ary.rindex {it.odd?} #=> 4
-p ary.rindex {it.even?} #=> 5
+p ary.rotate
+#=> [12, 13, 14, 15, 16, 10]
+
+p ary.rotate(2)
+#=> [13, 14, 15, 16, 10, 12]
+
+p ary.rotate(-1)
+#=> [16, 10, 12, 13, 14, 15]
