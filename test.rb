@@ -1,5 +1,7 @@
-ary = [10, 11, 12, 13, 14, 15]
-ary2 = [1, 2, 3, 4, 5]
+ary = [["A", 1], ["B" , 2], ["C", 3]]
 
-p ary.to_a #=> [10, 11, 12, 13, 14, 15]
-p ary2.to_a #=> [1, 2, 3, 4, 5]
+p ary.to_h #=> {"A" => 1, "B" => 2, "C" => 3}
+
+ary2 = ["Alice", "Bob", "Charlie"]
+
+p ary2.to_h { [it, it.length] } #=> {"Alice" => 5, "Bob" => 3, "Charlie" => 7}
