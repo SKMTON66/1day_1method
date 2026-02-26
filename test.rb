@@ -1,11 +1,6 @@
-ary = [["A", 1], ["B" , 2], ["C", 3]]
-ary2 = ["A", "B", "C"]
+ary = ["A", 1, "B" , 2, "C", 3]
+ary2 = ["A", 2, "D", "E", "F"]
+ary3 = [4, 5, 6]
 
-p ary.transpose #=> [["A", "B", "C"], [1, 2, 3]]
-
-p [].transpose #=> []
-
-p ary2.transpose 
-
-#=> 省略
-#=> TypeError
+p ary.union(ary2)
+p ary.union(ary2, ary3)
