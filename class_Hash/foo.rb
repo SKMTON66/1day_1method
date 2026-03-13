@@ -1,7 +1,5 @@
-h = {a:8, b:9, c:10}
+h = { a: :Alice, b: :Bob, c: :Chalie}
 
-h[:d] = 11
-p h #=> {a: 8, b: 9, c: 10, d: 11}
-
-h[:a] = 12
-p h  #=> {a: 12, b: 9, c: 10, d: 11}
+p h.assoc(:a) #=> [:a, :Alice]
+p h.assoc(:b) #=> [:b, :Bob]
+p h.assoc(:d) #=> nil
