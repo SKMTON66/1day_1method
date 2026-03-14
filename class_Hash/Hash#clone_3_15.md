@@ -1,3 +1,10 @@
+- [Hash\#clone \(Ruby 4\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/method/Hash/i/clone.html) <br>
+clone -> Hash <br>
+dup -> Hash
+
+selfと同じ内容を持つ新たなhashを返す。
+
+```rb
 h1 = { a: 'Alice', b: 'Bob', c: 'Charlie'}
 h2 = h1.dup
 h3 = h1.clone
@@ -22,3 +29,4 @@ h5[:d] = 'Dog'
 p h4 #=> {a: "Alice", b: "Bob", c: ["jack", "cat", "dante"]}
 p h5 #=> {a: "Alice", b: "Bob", c: ["jack", "cat", "dante"], d: "Dog"}
 p h6[:d] = 'Dog' #=> FrozenError
+```
