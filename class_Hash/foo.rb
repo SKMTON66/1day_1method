@@ -1,5 +1,6 @@
 h = { a: :Alice, b: :Bob, c: :Chalie}
+h2 = h
 
-p h.assoc(:a) #=> [:a, :Alice]
-p h.assoc(:b) #=> [:b, :Bob]
-p h.assoc(:d) #=> nil
+p h.clear
+p h
+p h2
