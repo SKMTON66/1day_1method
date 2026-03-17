@@ -1,3 +1,8 @@
+- [Hash\#compare\_by\_identity \(Ruby 4\.0 リファレンスマニュアル\)](https://docs.ruby-lang.org/ja/latest/method/Hash/i/compare_by_identity.html) <br>
+ハッシュのキーの一致判定を値が同じか？(eql？)ではなくオブジェクトが同じか？(equal?)で行うようにする破壊的メソッド。<br>
+(挙動を理解するのに時間がかかった...)
+
+```rb
 # 通常のhash
 hash = {'a' => 'Alice', 'b' => 'Bob', c: 'charlie'}
 char1 = 'a'
@@ -39,4 +44,5 @@ p sym1.equal?(sym2) #=> true
 hash[sym1] = 'Chan'
 hash[sym2] = 'Check'
 p hash #=> {"a" => "Alen", "b" => "Bob", c: "Check", "a" => "Alice", "a" => "Agree"}
-# 同じ内容のシンボルは同一とみなされる
+# 同じ内容のシンボルは同一とみなされるため書き換わる
+```
