@@ -1,4 +1,5 @@
-hash = Hash.new{ |hash, key| "#{key}は存在しません"}
-p hash.default #=> nil
-p hash.default_proc #=> #<Proc:0x0000000124116960 foo.rb:1>
-p hash['a'] #=> "aは存在しません"
+hash = {a: "Alice", b: "Bob", c: "charlie"}
+p hash.delete(:a) #=> "Alice"
+p hash #=> {b: "Bob", c: "charlie"}
+p hash.delete(:d) #=> nil
+p hash.delete(:d) {"#{it}は見つからりません"} #=> "dは見つからりません"
