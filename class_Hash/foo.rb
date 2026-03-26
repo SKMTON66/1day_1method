@@ -1,3 +1,3 @@
-hash = {a: "A", b: "B", c: "C"}
-hash.each_value { print it }
-#=> ABC
+hash = {}
+p hash.empty? #=> true
+p ({ a: "A" }.empty?)
