@@ -1,10 +1,5 @@
 hash = {a: "A", b: "B", c: "C", d: nil}
 
-p hash[:e] #=> nil
-p hash.fetch(:e) # key not found: :e (KeyError)
-
-hash.default = "no_key"
-p hash[:e] #=> "no_key"
-p hash.fetch(:e, "key_no") #=> "key_no"
-p hash.fetch(:e){ "#{it}は存在しません"} #=>　"eは存在しません"
-p hash.fetch(:e) #=> key not found: :e (KeyError) ※ fetchだとあらかじめデフォルト値を設定していてもエラーになる
+p hash.fetch_values(:a, :b) #=> ["A", "B"]
+p hash.fetch_values(:a, :e) {it.to_s.downcase} #=> ["A", "e"]
+p hash.fetch_values(:a, :e) #=> key not found: :e (KeyError)
