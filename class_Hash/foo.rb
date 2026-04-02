@@ -1,7 +1,3 @@
-hash = {a: "A", b: ["B", "Bob"], c: "C", d: nil}
-p hash.flatten #=> [:a, "A", :b, ["B", "Bob"], :c, "C", :d, nil]
-p hash.flatten(1) #=> [:a, "A", :b, ["B", "Bob"], :c, "C", :d, nil]
-p hash.flatten(-1) #=> [:a, "A", :b, "B", "Bob", :c, "C", :d, nil]
-
-hash2 = {a: "A", b: "B", c: "C", d: nil}
-p hash2.flatten #=> [:a, "A", :b, "B", :c, "C", :d, nil]
+hash = {a: "A", b: "B",c: "C", d: "D"}
+p hash.has_key?(:a) #=> ture
+p hash.has_key?(:e) #=> false
