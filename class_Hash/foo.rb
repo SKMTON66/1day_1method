@@ -1,8 +1,3 @@
-hash = {a: "A", b: "B"}
+hash = {a: "A", b: "B", c: "C", d: "A", e: "A"}
 
-p hash.inspect #=> "{a: \"A\", b: \"B\"}"
-p hash.to_s #=> "{a: \"A\", b: \"B\"}"
-
-hash2 = {a: 1, b: 2}
-p hash2.inspect #=> "{a: 1, b: 2}"
-p hash2.to_s #=> "{a: 1, b: 2}"
+p hash.invert #=> {"A" => :e, "B" => :b, "C" => :c}
