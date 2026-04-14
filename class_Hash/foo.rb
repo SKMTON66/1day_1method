@@ -1,5 +1,4 @@
-hash = { a: "A", b: "B", c: "C" }
+hash = { a: "A", b: "B" }
+hash2 = { c: "C", d: "D" }
 
-p hash.reject { |key, value| value == "B" } #=> {a: "A", c: "C"}
-p hash.reject #=> #<Enumerator: {a: "A", b: "B", c: "C"}:reject>
-p hash #=> {a: "A", b: "B", c: "C"}
+p hash.replace(hash2)
