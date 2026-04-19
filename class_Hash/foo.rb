@@ -1,4 +1,8 @@
-hash = { a: "A", b: "B", c: "C", d: "D" }
+class MyHash < Hash
+end
 
-p hash.to_a
-#=> [[:a, "A"], [:b, "B"], [:c, "C"], [:d, "D"]]
+hash = MyHash.new
+p hash.to_h
+#=> {}
+p hash.class #=> MyHash
+p hash.to_h.class #=> Hash
