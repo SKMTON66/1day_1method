@@ -1,8 +1,8 @@
-class MyHash < Hash
-end
+menu = { coffee: 400, cola: 300, tea: 250 }
 
-hash = MyHash.new
-p hash.to_h
-#=> {}
-p hash.class #=> MyHash
-p hash.to_h.class #=> Hash
+# 5人がメニューを頼んだときの合計金額
+p [:coffee, :tea, :cola, :tea, :coffee].map(&menu).sum
+
+# to_procを使わない場合
+p [:coffee, :tea, :cola, :tea, :coffee].map { |order| menu[order] }.sum
+p [:coffee, :tea, :cola, :tea, :coffee].map { menu[it]}.sum
