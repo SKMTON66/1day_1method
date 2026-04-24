@@ -8,9 +8,10 @@ selfのキーに対応する値を返すprocオブジェクトに変換される
 menu = { coffee: 400, cola: 300, tea: 250 }
 
 # 5人がメニューを頼んだときの合計金額
-p [:coffee, :tea, :cola, :tea, :coffee].map(&menu).sum
+p [:coffee, :tea, :cola, :tea, :coffee].map(&menu).sum #=> 1600
 
 # to_procを使わない場合
-p [:coffee, :tea, :cola, :tea, :coffee].map { |order| menu[order] }.sum
-p [:coffee, :tea, :cola, :tea, :coffee].map { menu[it]}.sum
+p [:coffee, :tea, :cola, :tea, :coffee].map { |order| menu[order] }.sum #=> 1600
+p [:coffee, :tea, :cola, :tea, :coffee].map { menu[it]}.sum #=> 1600
+
 ```
