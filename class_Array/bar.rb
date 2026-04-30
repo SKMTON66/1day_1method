@@ -1,2 +1,4 @@
-# p %w(A B C) * 3 #=> ["A", "B", "C", "A", "B", "C", "A", "B", "C"]
-p %w(A B C) * "と" #=> "AとBとC"
+hash1 = ["A", "B"]
+hash2 = ["C", "D"]
+
+p hash1 + hash2
