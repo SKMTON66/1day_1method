@@ -4,9 +4,9 @@ self - other -> Array
 selfからotherの要素を取り除いた配列を生成して返します。
 
 ```rb
-hash1 = %w(A B A C A D)
-hash2 = %w(B C D)
+ary1 = %w(A B A C A D)
+ary2 = %w(B C D)
 
-p hash1 - hash2
+p ary1 - ary2
 #=> ["A", "A", "A"]
 ```

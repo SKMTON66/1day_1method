@@ -1,5 +1,5 @@
-hash1 = %w(A B A C A D)
-hash2 = %w(B C D)
+ary = [1, 2, 3]
 
-p hash1 - hash2
-#=> ["A", "A", "A"]
+ary << 4
+
+p ary #=> [1, 2, 3, 4]
