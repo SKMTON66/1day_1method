@@ -1,10 +1,8 @@
 ary = [1, 2, 3, 4]
-ary2 = [nil, false, nil, false]
 
-p ary.any? #=> true
-p ary2.any? #=> false
+p ary.append 4 #=> [1, 2, 3, 4, 4]
 
-p ary.any? { (it * 2).odd? } #=> false
+p ary.append [5, 6] #=> [1, 2, 3, 4, 4, [5, 6]]
 
-# 各要素に対して pattern === item で比較することもできる
-p ary.any?(String) #=> false
+# 引数がなければ何もしない
+p ary.append #=> [1, 2, 3, 4, 4, [5, 6]]
