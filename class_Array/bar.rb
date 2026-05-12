@@ -1,4 +1,4 @@
-ary = [[1, 2], [3, 4]]
+ary = [0, 2, 4, 6, 8]
 
-p ary.assoc(1) #=> [1, 2]
-p ary.assoc(5) #=> nil
+p ary.bsearch { |x| x > 2 } #=> 4
+p ary.bsearch { |x| x > 8 } #=> nil
