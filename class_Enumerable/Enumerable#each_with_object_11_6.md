@@ -3,3 +3,14 @@ each_with_object(obj) -> Enumerator<br>
 each_with_object(obj) {|(\*args), memo_obj| ... } -> object
 
 与えられた任意のオブジェクトと要素をブロックに渡し繰り返し、最初に与えられたオブジェクトを返すメソッド。(説明よりも挙動を見ると分かりやすかった)
+
+````rb
+names = %w(Alice Bob Charlie)
+
+result = names.each_with_object({}) do |name, hash|
+  hash[name] = name.length
+end
+
+p result #=> {"Alice" => 5, "Bob" => 3, "Charlie" => 7}
+˝```
+````
